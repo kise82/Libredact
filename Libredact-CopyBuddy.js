@@ -7,23 +7,33 @@
 // @grant       none
 // @run-at      document-end
 //
-// @match       *://*.xcancel.com/match
-// @match       *://redlib.catsarch.com/*
+// @match       *://*.xcancel.com/*
+// @match       *://*.redlib.catsarch.com/*
 // ==/UserScript==
 
-const X = 'x.com';
-const REDDIT = 'reddit.com';
+const MAPPING = {
+  'x.com': 'xcancel.com',
+  'reddit.com': 'redlib.catsarch.com',
+};
 
 (() => {
   'use strict';
 
-  const hostname = window.location.hostname;
-  let url = window.location.href;
-  if (hostname.endsWith('xcancel.com')) {
-    url = url.replace(hostname, X);
-  } else if (hostname.endsWith('redlib.catsarch.com')) {
-    url = url.replace(hostname, REDDIT);
+  const replacement = ((hostname) => {
+    for (const [old, redacted] of Object.entries(MAPPING)) {
+      if (hostname.endsWith(redacted)
+          && (hostname.length == redacted.length || hostname.at(-(redacted.length + 1)) == '.')) {
+        return old;
+      }
+    }
+    return null;
+  })(window.location.hostname);
+
+  if (replacement == null) {
+    return;
   }
+  
+  const url = window.location.href.replace(window.location.hostname, replacement);
 
   const button = document.createElement('button');
   button.innerHTML = 'Copy original URL';
