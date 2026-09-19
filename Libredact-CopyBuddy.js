@@ -2,17 +2,17 @@
 // @name        Libredact-CopyBuddy
 // @author      kise82
 // @description Easily copy the content's original URL
-// @version     1.0.0
+// @version     1.0.1
 //
 // @grant       none
 // @run-at      document-end
 //
-// @match       *://*.xcancel.com/*
+// @match       *://*.nitter.miningtcup.me/*
 // @match       *://*.redlib.catsarch.com/*
 // ==/UserScript==
 
 const MAPPING = {
-  'x.com': 'xcancel.com',
+  'x.com': 'nitter.miningtcup.me',
   'reddit.com': 'redlib.catsarch.com',
 };
 

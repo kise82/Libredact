@@ -2,7 +2,7 @@
 // @name        Libredact
 // @author      kise82
 // @description Redact (redirect) social media access to FOSS front-ends
-// @version     1.0.0
+// @version     1.0.1
 //
 // @grant       none
 // @run-at      document-start
@@ -13,7 +13,7 @@
 
 // Front-end instances
 const MAPPING = {
-  'x.com': 'xcancel.com',
+  'x.com': 'nitter.miningtcup.me',
   'reddit.com': 'redlib.catsarch.com',
 };
 
@@ -26,9 +26,13 @@ const MAPPING = {
         return MAPPING[old];
       }
     }
-    return hostname;
+    return null;
   })(window.location.hostname);
 
+  if (replacement == null) {
+    return;
+  }
+  
   window.location.replace(window.location.href.replace(window.location.hostname, replacement));
 })();
 
