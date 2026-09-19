@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name        Libredact
 // @author      kise82
-// @description Redact (redirect) social media URLs to FOSS front-ends
+// @description Redact (redirect) social media access to FOSS front-ends
 // @version     1.0.0
 //
 // @grant       none
