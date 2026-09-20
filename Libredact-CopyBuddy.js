@@ -5,7 +5,7 @@
 // @version     1.0.1
 //
 // @grant       none
-// @run-at      document-end
+// @run-at      document-idle
 //
 // @match       *://*.nitter.miningtcup.me/*
 // @match       *://*.redlib.catsarch.com/*
