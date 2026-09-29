@@ -13,7 +13,7 @@
 
 // Front-end instances
 const MAPPING = {
-  'x.com': 'nitter.miningtcup.me',
+  'x.com': 'nitter.xitter.cc',
   'reddit.com': 'redlib.catsarch.com',
 };
 
