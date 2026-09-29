@@ -38,6 +38,7 @@ const MAPPING = {
   const button = document.createElement('button');
   button.innerHTML = 'Copy original URL';
   Object.assign(button.style, {
+    appearance: 'none',
     display: 'block',
     wigth: 'fit-content',
     fontFamily: 'sans-serif',
