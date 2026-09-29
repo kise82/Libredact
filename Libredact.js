@@ -2,7 +2,7 @@
 // @name        Libredact
 // @author      kise82
 // @description Redact (redirect) social media access to FOSS front-ends
-// @version     1.0.1
+// @version     1.0.2
 //
 // @grant       none
 // @run-at      document-start

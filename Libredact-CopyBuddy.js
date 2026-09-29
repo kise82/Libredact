@@ -2,7 +2,7 @@
 // @name        Libredact-CopyBuddy
 // @author      kise82
 // @description Easily copy the content's original URL
-// @version     1.0.1
+// @version     1.0.2
 //
 // @grant       none
 // @run-at      document-idle
