@@ -7,12 +7,12 @@
 // @grant       none
 // @run-at      document-idle
 //
-// @match       *://*.nitter.xitter.cc/*
+// @match       *://*.nitter.meowing.monster/*
 // @match       *://*.redlib.catsarch.com/*
 // ==/UserScript==
 
 const MAPPING = {
-  'x.com': 'nitter.xitter.cc',
+  'x.com': 'nitter.meowing.monster',
   'reddit.com': 'redlib.catsarch.com',
 };
 
